@@ -8,12 +8,15 @@
 </head>
 <body>
 
-    <label for="modoSwitch" style="display: flex; align-items: center;">
-        <span>🌞</span>
-        <input type="checkbox" id="modoSwitch" style="margin: 0 10px;">
-        <span>🌜</span>
-    </label>
-
+    <div class="switch-container">
+        <span class="modo-icon-sol">🌞</span>
+        <label class="switch" for="modoSwitch">
+            <input type="checkbox" id="modoSwitch">
+            <span class="slider"></span>
+        </label>
+        <span class="modo-icon-luna">🌜</span>
+    </div>
+    
     <div class="botones-container">
         <button class="calc-btn" data-calculo="molaridad">Molaridad</button>
         <button class="calc-btn" data-calculo="normalidad">Normalidad</button>
