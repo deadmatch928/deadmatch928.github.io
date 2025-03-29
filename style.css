@@ -1,0 +1,287 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #f7f9fc; /* Azul grisáceo claro */
+    color: #333;
+    margin: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Etiquetas y entradas */
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4f6f8;
+}
+
+/* Botón de cálculo */
+button {
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: none;
+    background: #4CAF50; /* Verde pastel */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #388E3C; /* Verde más intenso al pasar el mouse */
+}
+
+/* Resultado */
+#resultado {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Diseño del switch */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 3.5px;
+    left: 4px;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: #4CAF50; /* Verde pastel para el modo oscuro */
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Modo Claro (Por Defecto) */
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #f7f9fc;
+    color: #333;
+    transition: 0.4s ease;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode input {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode button {
+    background: #ff9800; /* Naranja pastel */
+}
+
+.dark-mode button:hover {
+    background: #e68900;
+}
+
+.modo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.modo-icon-sol {
+    position: relative;
+    top: 31px;
+    right: 20px;
+    font-size: 22px;
+    transition: opacity 0.4s ease;
+}
+
+.modo-icon-luna {
+    position: relative;
+    top: 30px;
+    right: 20px;
+    font-size: 22px;
+    transition: opacity 0.4s ease;
+}
+
+/* Opacidad para indicar el modo activo */
+.dark-mode .modo-icon:first-child { /* Sol en modo oscuro */
+    opacity: 0.4;
+}
+
+.dark-mode .modo-icon:last-child { /* Luna en modo oscuro */
+    opacity: 1;
+}
+
+body:not(.dark-mode) .modo-icon:first-child { /* Sol en modo claro */
+    opacity: 1;
+}
+
+body:not(.dark-mode) .modo-icon:last-child { /* Luna en modo claro */
+    opacity: 0.4;
+}
+
+
+/* calculadoras */
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.calc-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.calc-btn:hover {
+    background: #388E3C;
+}
+
+#calculadora-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f7f9fc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode #calculadora-container {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Estilos para el acordeón */
+details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background-color: #e0e0e0;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f7f7f7;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+summary:hover {
+    background-color: #bdbdbd;
+}
+
+/* Estilo del contenido dentro de cada acordeón */
+details div {
+    padding: 10px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Estilo para texto dentro del acordeón */
+details p {
+    margin: 0;
+}
+
+.dark-mode details {
+    background-color: #1e1e1e;
+    border: none;
+}
+
+.dark-mode details[open] {
+    background-color: #1e1e1e;
+}
+
+.dark-mode summary {
+    background-color: #333333;
+    color: #ddd;
+    border: none;
+}
+
+.dark-mode summary:hover {
+    background-color: #666;
+}
+
+.dark-mode details div {
+    color: #ccc;
+}
+
+.dark-mode details p {
+    color: #ccc;
+}
