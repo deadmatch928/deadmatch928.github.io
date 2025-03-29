@@ -30,6 +30,7 @@ label {
 
 input {
     width: 100%;
+    right: 21px;
     padding: 12px;
     margin-top: 5px;
     border: 1px solid #ddd;
